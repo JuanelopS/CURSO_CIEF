@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title: lo primero que lee el lector -->
+    <title>Elementos de accesibilidad</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1e7e74a174.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="navMenu">
+                <a href="#"><li>INICIO</li></a>
+                <a href="#parrafos"><li>PÁRRAFOS</li></a>
+                <a href="#enlaces"><li>ENLACES</li></a>
+                <a href="#botones"><li>BOTONES</li></a>
+                <a href="#items"><li>ITEMS</li></a>
+            </ul>
+        </nav>
+        <div id="titulo">
+            <img src="logo.png" alt="" id="logo1">
+            <h1 id="tituloPrincipal">HTML accesible</h1>
+            <img src="logo.png" alt="" id="logo2">
+        </div>
+    </header>
+    
+    <main>
+        <section id="parrafos">
+            <h2 tabindex="0">Párrafos</h2>
+            <p>Tengo tabindex 3</p>
+            <p>Tengo tabindex 1</p>
+            <p>Tengo tabindex 2</p>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+
+        <section id="enlaces">
+            <h2 tabindex="0">Enlaces</h2>
+            <p tabindex="0">Enlace a <a href="#">Google</a></p>
+            <p tabindex="0">Enlace a <a href="#">Microsoft</a></p>
+            <!-- Para que lea el párrafo en inglés -->
+            <p tabindex="0" lang="en">text in English</p>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+        
+        <section id="botones" tabindex="0">
+            <h2 tabindex="0">Butons</h2>
+            <!-- aria-label sustituye el contenido del botón -->
+            <button aria-label="Si haces clic aquí irás a Google.com">Fes clic aquí</button>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+
+        <section id="formulario" tabindex="0">
+            <h2>Formulario</h2>
+            <form action="" onsubmit="return enviarDatos()" method="get">
+                <!-- role es un atributo de grupo pensada para dar foco al fieldset -->
+                <div>
+                    <fieldset role="form">
+                        <legend>Satisfacción</legend>
+                        <!-- lo contenido en el label es la información dada al usuario -->
+                        <div id="formSatisfaccion">
+                            <label for="nom">Nombre</label>
+                            <!-- los inputs tienen foco nativo, no necesario tabindex -->
+                            <input type="text" name="nom" id="nom" 
+                            aria-required="true" required>
+                            <label for="felicitat">Cómo estás?</label>
+                            <select name="felicitat" id="felicitat">
+                                <option value="1">Feliz</option>
+                                <option value="2">Contento</option>
+                                <option value="3">Triste</option>
+                                <option value="4">Fatal, gracias</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="formCalor">
+                    <fieldset role="radiogroup">
+                            <legend>Tienes calor?</legend>
+                            <input type="radio" name="pregunta" id="si" value="si">
+                            <label for="si">Sí</label>
+                            <input type="radio" name="pregunta" id="no" value="no">
+                            <label for="no">No</label>
+                    </fieldset>
+                </div>
+                <input id="botonFormulario" type="submit" value="Enviar datos">
+            </form>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+
+        <section id="items" tabindex="0">
+            <h2>Items</h2>
+            <!-- <p tabindex="0">Frutas</p> -->
+            <article id="frutas">
+                <a href="#" rel="noopener noreferrer" class="frutas" contenido="manzanaRoja-3.50">
+                    <img src="manzana.jpg" alt="" class="imgFruites">
+                    <p>Manzana roja a 3.50€ el kilo</p>
+                </a>
+                <a href="#"  rel="noopener noreferrer" class="frutas" contenido="platano-4.50">
+                    <img src="platanos.jpg" alt="" class="imgFruites">
+                    <p>Plátanos a 4.50€ el kilo</p>
+                </a>
+            </article>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+        <!-- aria-labelledby de los botones de volver a inicio -->
+        <span hidden id="enlaceInicio">Si pulsas en este enlace volverás al inicio de la página</span>
+
+        <!-- <p tabindex="0">La manzana</p> -->
+        <!-- aria-labelledby -> id. Usar para cuando el alt se hace demasiado largo -->
+        <!-- <a href="#" rel="noopener noreferrer">
+            <img src="manzana.jpg" alt="" class="img-fruites" aria-labelledby="manzanas">
+            <p>Esto se lo salta, va al id por el aria-labelledby</p>
+            <p>Esto se lo salta, va al id por el aria-labelledby</p>
+            <p>Esto se lo salta, va al id por el aria-labelledby</p> 
+            <p id="manzanas">
+                La manzana es el fruto comestible de la especie Malus domestica, el manzano común. Es una fruta pomácea de forma redonda y sabor muy dulce, dependiendo de la variedad. Los manzanos se cultivan en todo el mundo y son las especies más utilizadas del género Malus.
+            </p>
+        </a> -->
+    </main>
+    <footer>
+        <p>HTML ACCESIBLE</p>
+    </footer>
+
+    
+
+    <script>
+        const frutas = document.querySelectorAll('.frutas');
+        // console.log(frutas[0].getAttribute('contenido'));
+
+        frutas.forEach(fruta => {
+            fruta.addEventListener('click', () => console.log(fruta.getAttribute('contenido')));
+            // console.log(fruta.lastElementChild.innerHTML);
+        });
+
+        const botonFormulario = document.querySelector('#botonFormulario');
+        
+        // botonFormulario.addEventListener('click', () => console.log('Hola'));
+
+        const enviarDatos = () => {
+            let nombre = document.querySelector('#nom').value;
+            console.log(nombre);
+        }
+
+    </script>
+</body>
+</html>

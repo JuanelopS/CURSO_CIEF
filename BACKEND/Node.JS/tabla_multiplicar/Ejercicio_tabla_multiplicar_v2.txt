@@ -1,0 +1,30 @@
+Nuestra tabla de multiplicar ha tenido éxito internacional.
+
+Ahora nos piden que la adaptemos a varios idiomas, 
+para que el usuario pueda elegir el que le conviene.
+Y además ¿podemos mejorar el diseño? 
+
+Debería de funcionar algo así (podemos modificarlo):
+
+node tabla_multiplicar num=4 lang=eng 
+
+o así
+
+node tabla_multiplicar lang=eng num=4 
+
+
+Otros requisitos:
+1) Habrá dos valores que serán el operador y el codigo de idioma.
+
+2) Puede ser que el usuario los cambie de orden.
+
+3) El usuario tiene que poder elegir si quiere mostrar o no la tabla
+por la consola: Si es que no, añadirá en la ejecución --noconsole.
+Por ejemplo: node tabla_multiplicar lang=eng num=4 --noconsole
+
+4) Si se introduce un código de idioma incorrecto mostraremos 
+un mensaje de error pero no se creará ningún fichero.
+
+5) El fichero con la tabla creada añadirá el nombre en el idioma correspondiente,
+en un directorio llamado como el código del idioma. 
+Por ejemplo, en inglés : eng/multiplication_table_of_5.txt

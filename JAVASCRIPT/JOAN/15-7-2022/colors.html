@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores</title>
+    <style>
+        *, ::after, ::before{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-size: 20px;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 20px 100px;
+            font-weight: bold;
+        }
+
+        img{
+            border: solid 2px black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img id="image" src="colores/blanco.png">
+        <div id="texto">
+            <p>A :  AZUL</p>
+            <p>R :  ROJO</p>
+            <p>V :  VERDE</p>
+            <p>Z :  AMARILLO</p>
+        </div>
+    </div>
+
+    <script>
+
+        let imagen = document.getElementById("image");
+        let parrafo = document.getElementById("texto");
+        
+        imagen.onmouseover = azul;
+        imagen.onclick = rojo;
+        imagen.onmousedown = amarillo;
+        imagen.onmouseout = verde;
+
+        window.onkeydown = teclado;
+
+
+        function azul () {imagen.src = "colores/azul.jpg"};
+        function rojo () {imagen.src = "colores/rojo.jpg"};
+        function amarillo () {imagen.src = "colores/amarillo.jpg"};
+        function verde () {imagen.src = "colores/verde.jpg"};
+
+
+        function teclado(e){
+            
+            //a 65 r 82 z 226 v 86 colores unicode
+            //alert(e.keyCode)
+            if(e.keyCode == 65) imagen.src = "colores/azul.jpg";
+            if(e.keyCode == 82) imagen.src = "colores/rojo.jpg";
+            if(e.keyCode == 90) imagen.src = "colores/amarillo.jpg";
+            if(e.keyCode == 86) imagen.src = "colores/verde.jpg";
+            if(e.keyCode == 13) imagen.src = "colores/blanco.png";
+        }
+
+    </script>
+</body>
+</html>

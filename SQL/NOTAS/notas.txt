@@ -1,0 +1,8 @@
+IFCD0210 nombre curso (base de datos)
+
+	MF0491_3 nombre modulo (tablas)
+
+		UF1842 nombre UF (nombre,horas)
+
+Alumnos 
+Gestionar notas del curso (notas de UF's)

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let edad = 51;
+        let precioEntrada;
+        let dia = "martes";
+
+        switch (dia){
+            case "lunes":
+                if (edad <= 35)
+                {
+                    precioEntrada = 2;
+                    console.log(precioEntrada);
+                }
+                else
+                {
+                    precioEntrada = 5;
+                    console.log(precioEntrada);
+                }
+                break;
+            case "martes":
+                if (edad <= 25)
+                {
+                    precioEntrada = 2;
+                    console.log(precioEntrada);
+                }
+                else if(edad > 25 && edad <= 50)
+                {
+                    precioEntrada = 5;
+                    console.log(precioEntrada);
+                }
+                else
+                {
+                    precioEntrada = 7;
+                    console.log(precioEntrada);
+                }
+                break;
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

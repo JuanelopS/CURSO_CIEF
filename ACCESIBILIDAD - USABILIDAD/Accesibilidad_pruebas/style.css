@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --wallpaper: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  --background: #010101;
+  --text: #fff;
+  --nav: var(--background);
+  --nav-hover: var(--text);
+  --nav-link: var(--text);
+  --nav-link-hover: var(--nav);
+  --shadow: #770fee;
+}
+
+:focus {
+  border: 5px solid var(--shadow);
+  border-radius: 8px;
+}
+
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  opacity: 0.8;
+  background: var(--wallpaper);
+  background-size: 10px 10px;
+  font-size: 1.2rem;
+}
+
+/* Ancho de la página */
+header,
+main {
+  width: 80%;
+}
+
+header,
+main {
+  display: grid;
+  gap: 2rem;
+  margin: 1rem auto;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+p {
+  margin: 0.8rem 0;
+}
+
+input[type="text"],
+select {
+  font-family: Roboto, sans-serif;
+  height: 2.5rem;
+  padding: 0.5rem;
+  width: 80%;
+}
+
+input[type="submit"],
+button {
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  box-shadow: 0 0 10px var(--text);
+  margin: 1rem;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  background-color: var(--text);
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background: var(--wallpaper);
+  color: var(--background);
+}
+
+#navMenu {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  list-style-type: none;
+  /* position: fixed; */
+  z-index: 99;
+  width: 100%;
+}
+
+#navMenu li {
+  align-items: center;
+  background-color: var(--nav);
+  border-radius: 10px;
+  border: 1px solid var(--shadow);
+  box-shadow: 0 0 5px var(--shadow);
+  display: grid;
+  height: 60px;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+#navMenu a {
+  color: var(--nav-link);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#navMenu li:hover {
+  background: var(--wallpaper);
+  border: 1px solid black;
+  box-shadow: 0 0 15px var(--shadow);
+  color: var(--nav-link-hover);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#titulo {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin-bottom: 2rem;
+}
+
+#logo1 {
+  opacity: 0.9;
+  width: 80%;
+  transform: rotateY(180deg);
+  margin-left: 1rem;
+}
+
+#logo2 {
+  opacity: 0.9;
+  width: 80%;
+  margin-right: 1rem;
+}
+
+#tituloPrincipal {
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 0 2px var(--shadow);
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+section {
+  background-color: var(--background);
+  border-radius: 10px;
+  border: 1px solid var(--shadow);
+  box-shadow: 0 0 7px var(--shadow);
+  color: var(--text);
+  padding: 3rem 5rem;
+}
+
+section:last-of-type {
+  margin-bottom: 4rem;
+}
+
+section a {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+section:hover {
+  transform: scale(1.01);
+}
+
+#botones {
+  display: grid;
+}
+
+#botones button {
+  width: 50%;
+  margin: 0 auto;
+}
+
+form {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+select {
+  width: 80%;
+}
+
+#formSatisfaccion {
+  display: grid;
+  grid-template-rows: repeat (2, 1fr);
+}
+
+#formCalor label {
+  margin-right: 1rem;
+}
+
+#botonFormulario {
+  grid-column: 1 / -1;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#frutas {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+
+.imgFruites {
+  border: 1px solid var(--shadow);
+  box-shadow: 0 0 5px var(--shadow);
+  margin: 0.5rem 0;
+  max-height: 270px;
+  width: 100%;
+}
+
+fieldset {
+  border: 0;
+}
+
+fieldset * {
+  margin: 1rem 0;
+}
+
+legend {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+img {
+  border-radius: 5px;
+}
+
+footer {
+  align-items: center;
+  background-color: var(--background);
+  border-top: 1px solid var(--shadow);
+  box-shadow: 0 0 7px var(--shadow);
+  color: var(--text);
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+#volverArriba {
+  text-align: right;
+  margin: 2rem -3rem -2rem 0;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 700px) {
+
+  #navMenu {
+    display: none;
+  }
+
+  #titulo {
+    grid-template-columns: 1fr 4fr 1fr;
+    margin-bottom: 2rem;
+  }
+
+  #tituloPrincipal{
+    font-size: 3rem;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+  #formSatisfaccion {
+    grid-template-rows: repeat (2, 1fr);
+  }
+
+  #botonFormulario {
+    width: 100%;
+  }
+}

@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgreen;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+#btnBusqueda {
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#inputBusqueda {
+  height: 2.7rem;
+  border-radius: 10px;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: 23rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  margin: 5px;
+  margin-bottom: 4rem;
+  padding: 1rem 3rem;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightslategrey;
+  border-radius: 10px;
+  box-shadow: 0 0 18px lightslategrey;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.img-pokemon {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sprites-pokemon {
+  width: 80px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 10px;
+}

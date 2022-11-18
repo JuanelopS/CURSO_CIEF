@@ -1,0 +1,94 @@
+.container{
+    margin: 2rem auto;
+    width: 1000px;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.imagenes{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.monedas{
+    width: 20%;
+}
+
+#tablero{
+    display: none;
+}
+
+.button {
+    width: 50%;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 3px 3px #999;
+}
+
+.button:hover {
+    background-color: #3e8e41
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#apuestas{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+.saldos{
+    display: flex;
+    justify-content: space-between;
+}
+
+#saldoJug, #saldoCpu{
+    width: 15rem;
+    padding: 1.2rem 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px white;
+}
+
+#saldoJug{
+    background-color: blue;
+    border-radius: 0 0 10px 0;
+}
+
+#saldoCpu{
+    background-color: red;
+    border-radius: 0 0 0 10px;
+}
+
+
+
+

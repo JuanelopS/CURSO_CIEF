@@ -1,0 +1,34 @@
+* {
+  background-color:rgb(48, 45, 45);
+  color: white;
+}
+
+.ejercicio{
+  font-size: 1.2rem;
+  margin: 2rem 1rem;
+}
+
+.p_total {
+  font-size: 2rem;
+  text-align: center;
+}
+
+table {
+  font-size: 1.2rem;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.table-head{
+  text-align: center;
+}
+
+tr{
+  border-bottom: 1px solid white;
+  height: 3rem;
+  text-align: center;
+}
+
+td {
+  padding: 5px;
+}

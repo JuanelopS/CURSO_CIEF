@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-family: 'Roboto', sans-serif;
+        }
+
+    </style>
+    <script>
+
+        window.onload = inicio;
+
+        function inicio()
+        {
+            let array = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9];
+            let meses = ["enero", "febrero", "marzo", "abril"];
+
+            //for each
+            array.forEach((x) => console.log(x));
+
+            //for of 
+            for (let x of meses) console.log(x);
+
+            //map
+            var numeros = [1, 4, 9];
+            var raices = numeros.map(Math.sqrt);
+            var potencias = numeros.map(Math.pow);
+            // raices tiene [1, 2, 3] -> numero mantiene sus valores
+            console.log(raices, potencias);
+        }
+            
+    </script>
+</head>
+<body>
+
+</body>
+
+</html>

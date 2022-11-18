@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa Batlló</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./img/foto_Gaudi_400x510.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/1e7e74a174.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<!--
+Se trata de conseguir una página acabada como la muestra, aplicando pautas de accesibilidad.
+Para ello habrá que :
+
+1) Estructurar correctamente con etiquetas semánticas.
+2) Hay que poder navegar con el tabulador por el menú, los títulos, los parráfos, las imágenes y el formulario.
+    Imagina que no tienes el mouse.
+3) Se incluyen los textos y las imágenes.
+4) No te olvides el formulario. No hace falta implementar Javascript, pero si lo haces es un plus.
+5) Otro plus es incluir un enlace para volver al menú desde el final de cada sección.
+6) Testear como accede a cada parte con el tabulador y el Screen Reader. Si no tienes auriculares hazlos sin sonido.
+7) En el footer debería estar tu nombre
+
+
+    Nota : La foto de Gaudí debe considerarse decorativa.
+-->
+
+<body>
+    <header>
+        <h1>La Casa Batlló</h1>
+        <h2 tabindex="0">Una obra maestra del modernismo</h2>
+        <nav>
+            <ul>
+                <li><a href="#autor">Antonio Gaudí</a></li>
+                <li><a href="#edificio">El edificio</a></li>
+                <li><a href="#imagenes">Imágenes</a></li>
+                <li><a href="#modernismo">El modernismo</a></li>
+                <li><a href="#formulario">Su opinión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="autor">
+            <h2 tabindex="0">Antonio Gaudí</h2>
+            <img src="img/foto_Gaudi_400x510.jpg" alt="" id="imgAutor" aria-labelledby="infoGaudi" tabindex="0">
+            <!-- tabindex aquí también si lo lee el screenReader al tener la fotografía el focus? -->
+            <p id="infoGaudi">
+            Gaudí fue un arquitecto con un sentido innato de la geometría y el volumen, así como una gran capacidad
+            imaginativa que le permitía proyectar mentalmente la mayoría de sus obras antes de pasarlas a planos. De
+            hecho, pocas veces realizaba planos detallados de sus obras; prefería recrearlos sobre maquetas
+            tridimensionales, moldeando todos los detalles según los iba ideando mentalmente. En otras ocasiones,
+            iba improvisando sobre la marcha, dando instrucciones a sus colaboradores sobre lo que debían hacer.
+            </p>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+    
+        <section id="edificio">
+            <h2 tabindex="0">El edificio</h2>
+            <p tabindex="0">
+                La Casa Batlló es un reflejo de la plenitud artística de Gaudí: pertenece a su etapa naturalista (primera
+                década del siglo XX), periodo en que el arquitecto perfecciona su estilo personal, inspirándose en las
+                formas orgánicas de la naturaleza, para lo que puso en práctica toda una serie de nuevas soluciones
+                estructurales originadas en los profundos análisis efectuados por Gaudí de la geometría reglada. A ello
+                añade el artista catalán una gran libertad creativa y una imaginativa creación ornamental: partiendo de
+                cierto barroquismo sus obras adquieren gran riqueza estructural, de formas y volúmenes desprovistos de
+                rigidez racionalista o de cualquier premisa clásica. 
+            </p>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+        
+        <section id="imagenes">
+            <h2 tabindex="0">Imágenes</h2>
+            <div id="imgEdificios">
+                <img src="img/fachada_h300.png" alt="La fachada del edificio reproduce formas naturales mediante curvas." tabindex="0">
+                <img src="img/pati_interior_h300.jpg" alt="En el interior, hay un patio muy luminoso." tabindex="0">
+                <img src="img/vestibul_h300.jpg" alt="Por su parte, el vestíbulo de entrada es de gran elegancia." tabindex="0">
+                <img src="img/salo_h300.jpg" alt="Pero quizá el espacio más destacables sea el salón, con su techo con forma de espiral, como un remolino." tabindex="0">
+            </div>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+            
+        <section id="modernismo">
+            <h2 tabindex="0">El modernismo</h2>
+            <p tabindex="0">
+                El modernismo rechaza el estilo poco atractivo de la arquitectura industrial de la primera mitad del
+                siglo XIX, y desarrolla nuevos conceptos arquitectónicos basados en la naturaleza, que consisten en los
+                materiales de construcción que se emplean, en las formas de los edificios y en las figuras de sus
+                fachadas. Los arquitectos y sus escultores colocan en el exterior de los edificios pájaros, mariposas,
+                hojas y flores a modo de elementos decorativos, ya sea como figuras adosadas o como adorno de la piedra
+                o cerámica. También se colocan figuras de tamaño mayor, animales fabulosos o personas, y en las cornisas
+                elementos de cerámica de color. Las ventanas y los balcones disponen de rejas de hierro forjado, que son
+                labradas artísticamente y contienen motivos inspirados en la naturaleza.
+            </p>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+
+        <section id="formulario">
+            <h2 tabindex="0">¡Su opinión es importante!</h2>
+            <form action="">
+                <fieldset>
+                    <legend tabindex="0">Por favor, comente su opinión</legend>
+                    <p id="necesario" tabindex="0">* Es necesario rellenar todos los campos</p>
+                    <div id="gridFormulario">
+                        <div id="labels">
+                            <label for="nombre">Su nombre</label>
+                            <label for="opinion">Su opinión</label>
+                        </div>
+                        <div id="inputs">
+                            <input type="text" name="nombre" id="nombre" required aria-required="true">
+                            <input type="text" name="opinion" id="opinion" required aria-required="true">
+                        </div>
+                    </div>
+                    <input type="submit" value="Enviar opinión" id="envioFormulario">
+                </fieldset>
+            </form>
+            <div id="volverArriba">
+                <a href="#" aria-labelledby="enlaceInicio">Inicio  <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </section>
+    </main>
+    <!-- span oculto: aria-labelledby de los botones de volver a inicio -->
+    <span hidden id="enlaceInicio">Si pulsas en este enlace volverás al inicio de la página</span>
+
+    <footer> 
+        <!-- Aquí debe ir tu nombre-->
+        Juan Gavira Pichaco        
+    </footer>
+
+
+</body>
+
+</html>

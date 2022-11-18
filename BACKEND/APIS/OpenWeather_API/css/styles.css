@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  display: grid;
+  gap: 3rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: 27rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  padding: 10rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  letter-spacing: 1px;
+}
+
+.item *{
+  display: block;
+}
+
+.place-text{
+  font-size: 1.5rem;
+  height: 2rem;
+}
+
+.weather-text, .temp-text {
+  font-size: 1.3rem;
+  text-align: center;
+  height: 1.7rem;
+}
+
+.humidity-wind-box {
+  border: 1px solid lightgray;
+  width: 100%;
+  color: rgb(157, 151, 151);
+}
+
+.humidity-wind-box *{
+  padding: 10px;
+  text-align: center;
+}
+
+.humidity-text {
+  border-bottom: 1px solid lightgray;
+}
+
+.form {
+  width: 100%;
+}
+
+.form *{
+  width: 100%;
+  height: 3rem;
+  margin: 5px 0;
+}
+
+input[type=text]{
+  border: 0;
+  background-color: rgba(211, 211, 211, 0.464);
+  padding: 1rem;
+}
+
+input[type=text]:focus{
+  outline-width: 0;
+}
+
+input[type=submit]{
+  background: #323941;
+  color: lightgray;
+  margin: 1rem 0;
+  border: 0;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Javascript">
+    <script>
+        // var edad = 17;
+        // var estudiante = true;
+        // var estado = "jubilado";
+
+
+
+        
+        var pedido;
+       
+        window.onload = inicio;
+    
+        function inicio(){
+            document.getElementById("boton").onclick = calcular;
+        }
+
+        if (pedido >= 100){
+            console.log("Tu descuento es de "+descuento+"€");
+            console.log("Vas a pagar "+total+"€");
+        }
+
+        function calcular(){
+
+            var descuento;
+            pedido = document.getElementById("pedido").value;
+            descuento = document.getElementById("descuento").value;
+            var calculoDescuento = pedido / 100 * descuento;
+            var total = pedido - calculoDescuento;
+            //console.log("El total a pagar es " +total);
+            document.getElementsByClassName("caja")[0].innerHTML = `<br>El total a pagar por tu pedido de ${pedido} son ${total}€`;
+        }
+    </script>
+    <title>Javascript; primeros pasos</title>
+
+</head>
+<body>
+    <label for="pedido">Escribe un nº de pedido: </label>
+    <input type="number" id="pedido">
+    <br>
+    <label for="descuento">Escribe un descuento: </label>
+    <input type="number" id="descuento">
+    <br>
+    <button id="boton">Envia</button>
+    <div class="caja"></div>
+</body>
+</html>

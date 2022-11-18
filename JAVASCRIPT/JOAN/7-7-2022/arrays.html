@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+
+        *, ::before, ::after{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root{
+            font-size: 62.5%;
+        }
+
+        body{
+            font-family: 'Roboto', sans-serif;
+            margin: 50px 100px;
+        }
+
+        #container{
+            height: 600px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        div{
+            font-size: 2rem;
+            padding: 30px;
+            gap: 30px;
+
+        }
+
+        #rgb{
+            text-align: center;
+            width: 500px;
+            border-bottom: 1px solid black;
+            margin: 0 auto;
+        }
+
+    </style>
+    <script>
+
+        window.onload = inicio;
+
+        function inicio()
+        {
+            let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+            let primerTrim = meses.slice(0,3);
+            let segundoTrim = meses.slice(3,6);
+            let tercerTrim = meses.slice(6,9);
+            let cuartoTrim = meses.slice(9,meses.length);
+            let uno = document.getElementById("1");
+            let dos = document.getElementById("2");
+            let tres = document.getElementById("3");
+            let cuatro = document.getElementById("4");
+            
+            uno.insertAdjacentHTML('beforeend', `<h1>Primer Trimestre:</h1>`)
+            primerTrim.forEach((x) => (uno.insertAdjacentHTML('beforeend',`${x}<br>`)));
+            uno.style.backgroundColor = 'red';
+
+            dos.insertAdjacentHTML('beforeend', `<h1>Segundo Trimestre:</h1>`)
+            segundoTrim.forEach((x) => (dos.insertAdjacentHTML('beforeend',`${x}<br>`)));
+            dos.style.backgroundColor = 'blue';
+
+            tres.insertAdjacentHTML('beforeend', `<h1>Tercer Trimestre:</h1>`)
+            tercerTrim.forEach((x) => (tres.insertAdjacentHTML('beforeend',`${x}<br>`)));
+            tres.style.backgroundColor = 'green';
+
+            cuatro.insertAdjacentHTML('beforeend', `<h1>Cuarto Trimestre:</h1>`)
+            cuartoTrim.forEach((x) => (cuatro.insertAdjacentHTML('beforeend',`${x}<br>`)));
+            cuatro.style.backgroundColor = 'yellow';
+        }
+            
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+    </div>
+ 
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+html{
+    font-size: 10px; /* rem: coge el valor del navegador o el raíz <html> */
+}
+
+
+body{
+    font-size: 10px;  
+}                      
+h1{                         
+    font-size:3rem; /* valores em: relativos */
+}
+
+h2{
+    font-size:2rem;
+}
+
+h3{
+    font-size:1.5rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+.texto{
+    font-size: 16px; /* tamaño por defecto: 16px */
+}
+
+.titulo1{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.titulo2{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.titulo3{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin: 50px 100px;
+    background-color:aliceblue;
+}
+
+ul{
+    list-style-type: square;
+}
+
+.contacto{
+    border: 3px solid turquoise;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin: 25px 50px;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.destacado{
+    border-left: 6px solid orange;
+}
+
+.destacado p{
+    padding-left:25px;
+}
+
+a:link{
+    text-decoration-style: dotted;
+    color: rgb(240, 20, 225);
+}
+
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+a:visited{
+    color: crimson;
+}
+
+
+
+hr{
+    border: 1px solid grey;
+    background-color: grey;
+    
+}
+*/

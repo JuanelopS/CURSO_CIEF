@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos predefinidos JS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 40px;
+        font-size: 1.6rem;
+        line-height: 4rem;
+      }
+
+      button{
+        padding: 15px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    
+    <br><br>
+    <button onclick="cambiarColor()">Cambiar color</button>
+    <br><br>
+    <button onclick="abrirVentana()">Abrir ventana</button>
+    <br><br>
+    <input type="number" name="numeros" id="num1">
+    +
+    <input type="number" name="numeros" id="num2">
+    <br>
+    
+    <button id="calculo">Calcula</button>
+    <div id="resultado">resultado:</div>
+
+    
+    <script>
+
+      document.getElementById("calculo").click = calcular;
+
+      function calcular(){
+          alert ("wtf");
+          let num1 = parseInt(document.getElementById("num1").value);
+          let num2 = parseInt(document.getElementById("num2").value);
+          
+          document.getElementById("calculo").innerHTML = num1 + num2;
+      }
+
+      function cambiarColor()
+      {
+          
+          if (document.body.style.backgroundColor == "red")
+          {
+              document.body.style.backgroundColor = "blue";
+          }
+          else 
+          {
+              document.body.style.backgroundColor = "red";
+          }
+      }
+
+      function abrirVentana()
+      {
+          window.open("https://www.google.es", "Google", "width=500 height=400 left=500 top=200");
+      }
+
+      // document.write(Date());
+      
+  </script>
+  </body>
+
+</html>

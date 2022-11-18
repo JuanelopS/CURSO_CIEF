@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/calc.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="resultado">0.00</div>
+        <form>
+        <h1>Calculadora</h1>
+        <div class="labelsInputs">
+          <div class="labels">
+            <label for="num1">Valor 1:</label>
+            <label for="num2">Valor 2:</label>
+          </div>
+          <div class="inputs">
+            <input type="text" id="num1" name="num1" size="8">
+            <input type="text" id="num2" name="num2" size="8">
+          </div>
+        </div>
+        <div class="radios">
+          <input type="radio" name="operacion" id="sumar" value="sumar">
+          <label for="sumar">+</label>
+          <input type="radio" name="operacion" id="restar" value="restar">
+          <label for="restar">-</label>
+          <input type="radio" name="operacion" id="multiplicar" value="multiplicar">
+          <label for="multiplicar">*</label>
+          <input type="radio" name="operacion" id="dividir" value="dividir">
+          <label for="dividir">/</label>
+        </div>
+      </fieldset>
+      <div class="botones">
+        <button id="boton">Calcular</button>
+        <button id="borrar" type="clear">Borrar</button>
+      </div>
+    </form>
+    </form>
+  </div>
+</body>
+</html>

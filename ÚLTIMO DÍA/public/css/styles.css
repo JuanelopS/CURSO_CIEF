@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+input[type=text], input[type=email] {
+  line-height: 2rem;
+  padding: 0 8px;
+ }
+
+ textarea {
+  padding: 8px;
+  resize: none;
+ }
+
+input[type=submit] {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  align-self: center;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "uf1844_practica",
+  "version": "1.0.0",
+  "description": "Evaluación Final uf1844_practica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Gavira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

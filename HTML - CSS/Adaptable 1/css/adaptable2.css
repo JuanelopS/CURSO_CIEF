@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* max-width: de mayor a menor */
+/* min-width: de menor a mayor */
+/* por rangos (min-width) and (max-width) */
+@media (min-width:1px){
+    body{
+        background-color:coral;
+        color: white;
+    }
+    h1{
+        font-size: 1.1em;
+
+    }
+    p{
+        font-size: .8em;
+    }
+}
+
+@media (min-width:801px){
+    body{
+        background-color:red;
+        color: white;
+    }
+    h1{
+        font-size: 1.2em;
+    }
+    p{
+        font-size: .9em;
+    }
+}
+
+@media (min-width:1200px){
+    body{
+        background-color:aliceblue;
+        color:black;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    p{
+        font-size:1em;
+    }
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin: 50px 100px;
+}
+
+ul{
+    list-style-type: square;
+}
+
+.contacto{
+    border: 3px solid turquoise;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin: 25px 50px;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.destacado{
+    border-left: 6px solid orange;
+}
+
+.destacado p{
+    padding-left:25px;
+}
+
+a:link{
+    text-decoration-style: dotted;
+    color: rgb(240, 20, 225);
+}
+
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+a:visited{
+    color: crimson;
+}
+
+hr{
+    border: 1px solid grey;
+    background-color: grey;
+}
+
+h1,h2,h3{
+    font-family: 'Oleo Script', cursive;
+}
+
+h3{
+    color:rgb(95, 89, 89);
+}

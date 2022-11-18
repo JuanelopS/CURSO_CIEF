@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario1</title>
+<link href="css/formulario.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>Formulario de pedido</h1>
+<form action="URL">
+	<fieldset>
+		
+		<legend>Datos Personales</legend>
+		<label for="nombre">Nombre</label>
+		<input type="text"	id="nombre" name="nombre" size="10" maxlength="15">
+		<br>
+		<label for="apellido">Apellido</label>
+		<input type="text"	id="apellido" name="apellido" size="20">
+		<br>
+		<label for="edad">Edad</label>
+		<input type="number" id="edad" name="edad" size="4" min="18" max="199">
+		<br>
+		<label for="direccion">Dirección:</label>
+		<textarea id="direccion" name="direccion" rows="2" cols="40">Escriba aquí su dirección</textarea>
+		<br>
+		<label for="email">Correo electrónico</label>
+		<input type="email" id="email" name="email">
+
+	</fieldset>
+	<fieldset>
+		
+		<legend>Pedido</legend>
+		<p>Selecciona el calzado:</p>
+	
+		<input type="radio" id="botas" name="producto" value="BOT">
+		<label for="botas">Botas</label><br>
+		<input type="radio" id="zapatos" name="producto" value="BOT">
+		<label for="zapatos">Zapatos</label><br>	
+		<input type="radio" id="sandalias" name="producto" value="BOT">
+		<label for="sandalias">Sandalias</label><br>
+	
+		<p>Escoja un color</p>
+		<input type="radio" id="rojo" name="color" value="1">
+		<label for="rojo">Rojo</label><br>	
+		<input type="radio" id="azul" name="color" value="2">
+		<label for="azul">Azul</label><br>
+	
+		<label for="talla">Escoja la talla</label>
+		<select id="talla" name="talla">
+			<option value="1">38</option>
+			<option value="2">39</option>
+			<option value="3">40</option>	
+			<option value="4">41</option>	
+			<option value="5">42</option>	
+			<option value="6">43</option>	
+		</select>
+
+	</fieldset>
+	<br>
+	<br>
+	<label for="preferencias">¿Qué tipo de productos te interesan?</label>
+	<select id="preferencias" name="preferencias" size="3" multiple>
+		<option value="1">Camisetas</option>
+		<option value="2">Gorras</option>
+		<option value="3">Gafas</option>	
+		<option value="4">Relojes</option>	
+		<option value="5">Pantalones</option>	
+		<option value="6">Bañadores</option>	
+	</select>	
+	<p>Por favor, acepte los terminos y condiciones</p>
+	<input type="checkbox" id="terminos" name="terminos" value="1">
+	<label for="terminos">Acepto</label>
+
+	<p>¿Desea recibir ofertas y promociones?</p>
+	<input type="checkbox" id="promo" name="ofertas" value="1">
+	<label for="promo">Acepto</label>
+	
+	<p>¿Dónde suele adquirir nuestros productos?</p>
+	<input type="checkbox" id="web" name="compras" value="1">
+	<label for="web">Web</label>	
+	<input type="checkbox" id="tienda" name="compras" value="2">
+	<label for="tienda">Tienda</label>
+	<br>
+	<br>
+	<label for="archivo">Suba un archivo si lo desea</label> 
+	<input type="file" id="archivo" name="archivo">
+	<br>
+	<br>
+	<label for="gustos">¿Qué productos te gustan?</label>
+	<select id="gustos" name="gustos">
+		<optgroup label="Pantalones">
+			<option value="1">Pantalones</option>
+			<option value="2">Jeans</option>
+			<option value="3">Sport</option>
+		</optgroup>
+		<optgroup label="Playa">
+			<option value="4">Toallas</option>	
+			<option value="5">Gorras</option>	
+			<option value="6">Bañadores</option>
+		</optgroup>	
+	</select>	
+<br>
+<br>
+	
+	
+	<input type="submit" value="Mándalo">
+	<input type="reset" value="Volver a empezar">
+	
+	
+	
+	
+</form>
+	
+	
+	
+</body>
+</html>

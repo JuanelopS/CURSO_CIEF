@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos predefinidos JS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 40px;
+        font-size: 1.6rem;
+        line-height: 4rem;
+        background: linear-gradient(-45deg, rgb(21, 177, 201), rgb(198, 35, 78));
+        background-repeat: no-repeat;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 3px 3px black;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    
+    <script>
+
+        document.write("<h1>Objetos predefinidos JS</h1><br>");
+
+        document.write('window.closed: Indica si está cerrada o no la ventana.<br>');
+
+        document.write('window.defaultStatus: Indica el text a mostrar en la barra de estado.<br>');
+
+        document.write('window.location.hostname: usado para obtener url de la página actual. ' + window.location.hostname + '<br>');
+        //host muestra url y puerto
+        //port -> puerto a través del que nos conectamos
+        //protocol -> http / https / file
+
+        document.write('window.history: ref. páginas visitadas. Ej: window.history.back -> vuelve a la página anterior.<br>');
+
+        document.write('window.name: nombre de la ventana actual. <br><br>');
+
+
+        document.write('<h2>Métodos del objeto Window : </h2><br>');
+
+        document.write('window.open(nombre, opciones): pop-up (si bloqueado devuelve null). ' + window.open('http://www.google.es','Google','width=500px, height=300px, resizable=0'));
+
+        document.write('<br>window.confirm: alert true/false. <br>');
+
+        document.write('window.prompt: alert para introducir cadena. <br><br>');
+
+        document.write('<h2>Métodos del objeto document : </h2><br>');
+
+        document.write("document.bgColor = 'red'; <br>");
+        // document.bgColor="#0F0";
+
+        document.write("document.color = '#0F0'; <br>");
+        //document.color="#0F0";
+
+        document.write("document.linkColor = '#00F'; <br>");
+        // por defecto
+        document.write("document.alinkColor = '#00F'; <br>");
+        // activo
+        document.write("document.vlinkColor = '#00F'; <br>");
+        // visitado
+
+        document.write("document.title = 'Título de la página'; " + "<br>");
+        
+        document.write("document.links[indice].href; <br>");
+        document.write("document.links.length; <br>");
+        // nº de links que contiene la página web
+        document.write("document.links[2].title; <br>");
+        // document.links[2].title -> muestra el title del tercer link en la web
+
+        document.write("document.forms[indice].propiedad; <br>");
+        // para formularios
+
+        document.write("document.images[indice].propiedad; <br>");
+        //para imágenes
+
+        let host = document.location.host;
+        document.write("<br><br>" + host + "<br><br>");
+
+        // document.open(document.location.href="https://www.google.es");
+        // abre directamente otra web al entrar en la página
+
+        // location.reload();  
+        // no para de recargar la página
+        // document.location.replace("https://www.google.es");
+        // con replace reemplazamos la url en el navegador;
+
+    </script>
+
+    <h2></h2>
+
+  </body>
+
+</html>

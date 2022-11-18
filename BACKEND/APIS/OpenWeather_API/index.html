@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Weather API</title>
+</head>
+<body>
+  <main class="container">
+    <section class="section">
+      <div class="item">
+        <div class="item-text">
+          <p class="place-text">KIEV / UA</p>
+          <p class="weather-text">CLEAR SKY</p>
+          <p class="temp-text">-4 Cº</p>
+        </div>
+        <div class="humidity-wind-box">
+          <p class="humidity-text">Humidity: 92%</p>
+          <p class="wind-text">Wind: 2 m/s</p>
+        </div>
+        <div class="form">
+            <input type="text" name="city" id="input-city">
+            <input type="text" name="countrycode" id="input-countrycode">
+            <input type="submit" value="SAVE CHANGES">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/weather_api.js"></script>
+</body>
+</html>

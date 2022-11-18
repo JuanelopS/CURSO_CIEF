@@ -1,0 +1,3 @@
+PRUEBAS UNITARIAS -> Testing a funciones
+
+PRUEBAS DE INTEGRACIÓN -> Testing del trabajo de varias funciones y/o varias personas

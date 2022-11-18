@@ -1,0 +1,64 @@
+
+h1 {
+    color: #000;
+    font-size: 5em;
+    text-align: center;
+}
+h2 {
+    color: #000;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+p {
+    color: #000;
+    font-size: 2em;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.container-error {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+}
+
+
+.fruites {
+    display: flex;
+    justify-content: space-around;
+}
+
+.imatges {
+    max-width: 400px;
+}
+*/
+
+.total {
+    border-top: 2px solid blue;
+    color: blue;
+}
+
+
+a{
+    text-decoration: none;
+    color: darkgreen;
+}
+
+.imatges {
+    transition: all 500ms;
+}
+
+.imatges:hover {
+    transform: translate(15px, -20px);
+}
+
+.error-image {
+    width: 300px;
+    height: 300px;
+}

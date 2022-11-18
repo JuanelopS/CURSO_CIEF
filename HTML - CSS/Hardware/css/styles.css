@@ -1,0 +1,18 @@
+body{
+    color: #126925;
+    background-color: #ddd;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-top-left-radius: 10px;
+}
+h1 {
+    color: #EE2A2A;
+    font-size: 2em;
+}
+img {
+    border: 0.3em double #3E6EE1;
+    border-radius: 10px;
+}
+
+.verde {
+	color: #24E117;
+}

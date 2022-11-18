@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>String Methods Javascript</title>
+        <meta charset="utf-8">
+
+        <style type="text/css"> body {font-family: sans-serif; margin:25px; text-align:center;}
+
+            #pulsador {padding:15px; width: auto; display: inline-block; margin: 25px; cursor: pointer;
+
+            color: white; border-radius: 40px; background: rgb(202, 60, 60);}
+
+            #pulsador:hover, #marcaOperadores:hover {background: rgb(66, 184, 221);}
+
+        </style>
+
+        <script type="text/javascript">
+
+            function ejemploCadenasDeTexto() {
+
+                var textoUsuario = prompt ('Introduzca una frase');
+
+                var mayusculas = textoUsuario.toUpperCase(); var minusculas = textoUsuario.toLowerCase();
+
+                var primeraLetra = textoUsuario.charAt(0); var ultimaLetra = textoUsuario.charAt(textoUsuario.length-1);
+
+                var subcadena26 = textoUsuario.substring(2, 6); var subcadena26sli = textoUsuario.slice(2,6);
+
+                var subcadena5aFinal = textoUsuario.substring(5); var subcadena5aFinalsli = textoUsuario.slice(5);
+
+                var tresCharDesdeFinal = textoUsuario.slice(-5, -2); var cincoUltimasLetras = textoUsuario.slice(-5);
+
+                var indicePrimeraP = textoUsuario.indexOf('p'); var indicePrimeraPDesdeIndice5 = textoUsuario.indexOf('p', 5);
+
+                var ultimaP = textoUsuario.lastIndexOf('p'); var subcadenasPorEspacios = textoUsuario.split(' ');
+
+                var cadenaCambiaPrimeraePorE = textoUsuario.replace('e', 'E');
+
+                var cadenaCambiaTodasePorE = textoUsuario.replace (/e/g, 'E');
+
+                var reemplazoSubcadena = textoUsuario.replace (/plo/g, 'XX');
+
+                var caracterIndice3 = textoUsuario[3];
+
+                var msg = 'Entrada: '+textoUsuario + '<br>';
+
+                msg = msg + 'La entrada en mayúsculas es: ' + mayusculas +'<br>La entrada en minúsculas es: ' + minusculas + '<br>';
+
+                msg = msg + 'Primera letra es: ' + primeraLetra + ' y última letra es: '+ultimaLetra + '<br>';
+
+                msg = msg + 'Subcadena entre tercera letra y sexta letra es: ' + subcadena26 + '. Si se extrae con slice: '+subcadena26sli +'<br>';
+
+                msg = msg + 'Subcadena desde el caracter indice 5 hasta el final es: ' + subcadena5aFinal+ '. Si se extrae con slice: '+subcadena5aFinalsli+'<br>';
+
+                msg = msg + 'Uso de slice negativo para extraer del quinto por atrás al antepenúltimo caracter: ' + tresCharDesdeFinal+ '<br>';
+
+                msg = msg + 'Cinco últimos caracteres: '+cincoUltimasLetras + '<br>';
+
+                msg = msg + 'Indice posición de la primera p en la cadena: ' + indicePrimeraP + ' y de la última p es: ' +ultimaP +'<br>';
+
+                msg = msg + 'Indice primera p desde la 5a posición es: ' + indicePrimeraPDesdeIndice5 +'<br>';
+                // TENGO QUE ARREGLAR LA DIVISIÓN EN SUBCADENAS
+                msg = msg + 'División de subcadenas por espacios: <br>';
+
+                for (var i=0; i<subcadenasPorEspacios.length; i++) { msg = msg + 'Subcadena ' + (i+1) + ':\<\<'+subcadenasPorEspacios[i]+ '\>\> '; }
+
+                msg = msg + '<br>';
+
+                msg = msg + 'Cadena con primera e reemplazada por E: ' + cadenaCambiaPrimeraePorE + '<br>';
+
+                msg = msg + 'Cadena con e reemplazada por E todas: ' + cadenaCambiaTodasePorE + '<br>';
+
+                msg = msg + 'Cadena reemplazando plo por XX: ' + reemplazoSubcadena + '<br>';
+
+                msg = msg + 'El carácter con índice 3 es: ' + caracterIndice3;
+
+                document.write(msg);
+
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="cabecera">
+
+        <h2>Ejemplo funciones para texto JavaScript</h2>
+
+        </div>
+
+        <div id ="pulsador" onclick="ejemploCadenasDeTexto()"> Probar </div>
+
+    </body>
+
+</html>

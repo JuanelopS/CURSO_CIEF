@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: justify;
+    margin: 0em 5em;
+    background-image: url('https://media2.giphy.com/media/A06UFEx8jxEwU/giphy.gif?cid=ecf05e47gnc40z9nq5rt5n98hrng0qnkqhckpcdkdnszjk7n&rid=giphy.gif&ct=g');
+    background-size: cover;
+    font-size: 14px; /* con este valor podemos jugar para cambiar todos las font con tamaño em */
+}
+
+ul{
+    list-style-type: square;
+}
+
+.contacto{
+    border: 3px solid greenyellow;
+    border-radius: 10px;
+    padding: 1em 0.5em;
+    margin: 1.5em 3em;
+    font-size: 0.8em;
+    font-style: italic;
+    margin-bottom: 3em;
+}
+
+.destacado{
+    border-left: 6px solid greenyellow;
+}
+
+.destacado p{
+    padding-left: 1.5em;
+}
+
+a:link{
+    text-decoration-style: dotted;
+    color: yellow;
+}
+
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+a:visited{
+    color: crimson;
+}
+
+hr{
+    border: 1px solid grey;
+    background-color: grey;
+}
+
+h1{
+    font-family: "Oleo Script", cursive;
+    font-size: 2.5em;
+    text-shadow: 3px 3px green;
+}
+
+h2{
+    font-family: "Oleo Script", cursive;
+    text-decoration: underline;
+    font-size: 2em;
+    text-shadow: 2px 2px green;
+}
+
+h3{
+    font-family: "Oleo Script", cursive;
+    color:white;
+    font-size: 1.5em;
+    text-shadow: 2px 2px green;
+}

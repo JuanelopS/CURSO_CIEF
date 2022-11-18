@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jocs dels Xinos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="saldos">
+      <div id="saldoJug">Jugador: </div>
+      <div id="saldoCpu">CPU: </div>
+    </div>
+    <div class="container text-center text-">
+      <h1 class="text-center">Juego de los "Chinos"</h1>
+      <p id="instrucciones">
+        Es un juego de azar que consiste en intentar adivinar el número total de
+        monedas que varios jugadores (al menos dos) guardan en su mano cerrada.
+        Se utilizan tres monedas por jugador y se pueden sacar 0, 1, 2 ó 3
+        monedas. Gana quien acierta el total de monedas.
+      </p>
+      <div class="centrar">
+        <button onclick="primeraPartida()" class="button" id="partida">
+          <i class="fa-solid fa-coins"></i> Iniciar el juego
+        </button>
+      </div>
+      <div id="tablero">
+        <p id="elegir" class="text-center"></p>
+        <div class="imagenes">
+          <img
+            class="monedas"
+            src="img/cap.jpg"
+            alt="Ninguna"
+            onclick="jugar(0)"
+          />
+          <img 
+            class="monedas" 
+            src="img/una.jpg" 
+            alt="Una" 
+            onclick="jugar(1)" 
+          />
+          <img
+            class="monedas"
+            src="img/dues.jpg"
+            alt="Dos"
+            onclick="jugar(2)"
+          />
+          <img
+            class="monedas"
+            src="img/tres.jpg"
+            alt="Tres"
+            onclick="jugar(3)"
+          />
+        </div>
+        <div id="apuestas">
+        </div>
+        <div id="final"></div>
+        <div id="ganador"></div>
+      </div>
+    </div>
+    <script src="js/xinos.js"></script>
+  </body>
+</html>

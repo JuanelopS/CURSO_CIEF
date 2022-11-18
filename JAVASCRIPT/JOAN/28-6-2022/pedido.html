@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido (Camisas y Pantalones)</title>
+    <style>
+        body
+        {
+            margin: 30px auto;
+            width: 400px;
+            border: 1px solid black;
+            padding: 5px;
+            height: 50vh;
+        }
+        h1{
+            text-align: center;
+            font-size: 2em;
+            text-decoration: underline;
+        }
+        #lista{
+            margin: 20px;
+            padding-left: 50px;
+            font-size: 1.2em;
+            width: 100%;
+        }
+        #total{
+            padding-top: 35px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.7em;
+            margin-top: 40px;
+        }
+        #fecha{
+            text-align: right;
+            margin: 5px 5px 0 0;
+            font-weight: bold;
+            color: grey;
+        }
+    </style>
+    <script>
+        let numCamisas = parseInt(prompt("Número de camisas:"));
+        let precioCamisas;
+        let numPantalones = parseInt(prompt("Número de pantalones:"));
+        let precioPantalones;
+        let compra;
+        let descuento = 0;
+
+        const fecha = new Date(); //la fecha en el tiquet
+
+        if (numCamisas < 3) precioCamisas = 40;
+        else precioCamisas = 25;
+
+        if (numPantalones < 3) precioPantalones = 50;
+        else precioPantalones = 40;
+
+        compra = numCamisas * precioCamisas + numPantalones * precioPantalones;
+
+        if (compra > 200)
+        {
+            descuento = compra * 0.20; //Descuento del 20%;
+            compra = compra - descuento;
+        
+            document.write(`<div id="fecha">${fecha.toLocaleDateString()}</div>
+                        <h1>TICKET DE COMPRA:</h1> <br>
+                        <div id="lista">${numCamisas} camisas * ${precioCamisas}€ = ${numCamisas*precioCamisas}€ <br>
+                        ${numPantalones} pantalones * ${precioPantalones}€ = ${numPantalones*precioPantalones}€ <br><br>
+                        <em>*Descuento: -${descuento.toFixed(2)}€</em> <br>
+                        <div id="total">Total: ${compra.toFixed(2)}€</div><br></div>`);
+        }
+        else
+        {
+            document.write(`<div id="fecha">${fecha.toLocaleDateString()}</div>
+                        <h1>TICKET DE COMPRA:</h1> <br>
+                        <div id="lista">${numCamisas} camisas * ${precioCamisas}€ = ${numCamisas*precioCamisas}€ <br>
+                        ${numPantalones} pantalones * ${precioPantalones}€ = ${numPantalones*precioPantalones}€ <br><br>
+                        <em>*Sin descuento aplicable</em><br>
+                        <div id="total">Total: ${compra.toFixed(2)}€</div><br></div>`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

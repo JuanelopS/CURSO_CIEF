@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import url('general.css'); 
+
+body{
+    color: orange;
+    background-color: green;
+    text-align: justify;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+h2{
+    color: orange;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+a{
+    color: pink;
+}
+a:hover{
+    color: red;
+}
+sup{
+    font-size: 0.8em;
+}
+p{
+    padding: 15px;
+}

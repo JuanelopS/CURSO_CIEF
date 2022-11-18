@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relojes</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="mb-5">
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1 navbar-text text-dark">Ejercicio Relojes / Alarma </span>
+      </div>
+    </nav>
+  </header>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel"><i class="fa-regular fa-bell"></i></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h2 class="text-danger text-center" id="modal-text">ALARMA</h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="apagarAlarma">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-3">
+    <div class="vh-100 d-flex flex-column justify-content-center align-items-center">
+      <!-- Primer reloj -->
+      <div class="row container-reloj1 mb-3">
+        <div class="reloj text-center" id="texto-reloj1">
+          <p>00:00:00</p>
+        </div>
+        <div class="botones-reloj1 text-center">
+          <button id="btn1-reloj1" class="btn btn-lg btn-primary" type="button">Activar</button>
+          <button id="btn2-reloj1" class="btn btn-lg btn-danger" type="button">Parar</button>
+        </div>
+      </div>
+      <!-- Segundo reloj -->
+      <div class="row container-reloj2 mb-3 mt-3">
+        <div class="reloj text-center" id="texto-reloj2">
+         <p>00<small>h</small>:00<small>m</small>:00<small>s</small></p>
+        </div>
+        <div class="botones-reloj2 text-center">
+          <button id="btn1-reloj2" class="btn btn-lg btn-primary" type="button">Activar</button>
+          <button id="btn2-reloj2" class="btn btn-lg btn-danger" type="button">Parar</button>
+        </div>
+      </div>
+      <!-- Tercer reloj -->
+      <div class="row container-alarma mb-3 mt-3">
+        <div class="reloj text-center invisible" id="texto-alarma">
+          <p class="parrafo-alarma">
+            <span id="alarma-hora">00</span>:<span id="alarma-minutos">00</span>:<span id="alarma-segundos">00</span>
+          </p>
+        </div>
+        <div class="botones-alarma text-center">
+          <button id="btn1-alarma" class="btn btn-lg btn-primary" type="button">Activar</button>
+          <button id="btn2-alarma" class="btn btn-lg btn-danger" type="button">Borrar</button>
+          <button id="btn3-alarma" class="btn btn-lg btn-success" type="button">Guardar</button>
+        </div>
+        <div class="contenedor-alarmas offset-3 col-6">
+          <div id="alarmas-guardadas">
+            <p id="alarma-fijada"></p>
+          </div>
+        <!-- Inputs Alarma -->
+          <div class="inputs-alarma mt-5 ">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control text-end" id="inputHora" value="00" maxlength="2" required>
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default">H</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control text-end" id="inputMinutos" value="00"  maxlength="2" required> 
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default">M</span>
+                </div> 
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control text-end" id="inputSegundos" value="00"  maxlength="2" required>
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">S</span>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <audio src="./media/alarma.mp3" id="alarma-audio" loop></audio>
+  <script src="./js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>

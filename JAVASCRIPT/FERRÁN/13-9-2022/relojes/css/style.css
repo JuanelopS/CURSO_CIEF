@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'digital-7';
+  src: url('./digital-7.ttf');
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.reloj {
+  font-family: digital-7;
+  font-size: 4rem;
+}
+
+.escondido {
+  display: hidden;
+}
+
+.contenedor-alarmas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#alarma-fijada {
+  font-family: digital-7;
+  font-size: 2.2rem;
+}

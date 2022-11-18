@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin: 50px 100px;
+    background-color:aliceblue;
+}
+
+ul{
+    list-style-type: square;
+}
+
+.contacto{
+    background-color:lightsalmon;
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin: 25px 50px;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.destacado{
+    border-left: 6px solid orange;
+}
+
+.destacado p{
+    padding-left:25px;
+}
+
+a:link{
+    text-decoration-style: dotted;
+    color: rgb(240, 20, 225);
+}
+
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+a:visited{
+    color: crimson;
+}
+
+
+hr{
+    border: 1px solid grey;
+    background-color: grey;
+    
+}
+
+h1{
+    font-family: 'Oleo Script', cursive;
+}
+
+h2{
+    font-family: 'Oleo Script', cursive;
+}
+
+h3{
+    color:rgb(95, 89, 89);
+    font-family: 'Oleo Script', cursive; 
+}
+
+/* formato de la primera letra de cada párrafo */
+/* si añado first child será únicamente el primer párrafo */
+p::first-letter{
+    color: green;
+    font-size: 2em;
+    font-weight: bold;
+}
+/* formato primera línea que se ve */
+p::first-line{
+    color: red;
+    font-size: .8em;
+}
+
+.contacto::before{
+    content: "Esto es un ejemplo de destacado (before)";
+    font-weight: bold;
+}
+
+.contacto::after{
+    content:"Hasta aquí el ejemplo de destacado (after)";
+    font-weight: bold;
+}
+
+/* seleccionado por el usuario */
+.contacto::selection{
+    background: yellow;
+}
+
+/* div + p - primer elemento p que se encuentre inmediatamente despues de todos los div, es decir, la p a continuación de cerrarse el div, no dentro del mismo */
+
+/* p + span + p -  */
+
+/* a[target] ->  todos los enlaces con el atributo target*/
+
+/* a[target=_blank] -> todos los enlaces con el atributo target como _blank */
+
+/* a[href="www.google.es"] -> todos los enlaces que lleven a www.google.es  */
+
+
+
+
+
+

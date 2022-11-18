@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diseño de formularios en CSS</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<link rel="stylesheet" href="css/estilo7.css">
+</head>
+<body>
+<div id="contenedor">
+	
+	<form id="formulario1" name="formulario1" method="post" action="data.php">
+	<fieldset id="grupo_datos">
+	<legend id="legend_datos">Datos personales</legend>
+	<div id="cabecera"></div>
+		<label for="nombre">Nombre:</label>
+		<input type="text" name="nombre" id="nombre" autofocus>
+		<label for="apellidos">Apellidos:</label>
+		<input type="text" name="apellidos" id="apellidos">
+		<label for="dni">DNI:</label>
+		<input type="text" name="dni" id="dni" maxlength="9">
+		<label for="edad">Edad:</label>
+		<input type="text" name="edad" id="edad" size="2" maxlength="2">
+		<div>
+			<label for="sexo">Sexo:</label>
+			<select id="sexo" name="sexo">
+			<option value="X" selected="selected">...</option>
+			<option value="M">Másculino</option>
+			<option value="F">Femenino</option>
+			</select>
+		</div>
+		<fieldset id="grupo_fechas">
+			<legend id="legend_fechas">Fecha de nacimiento</legend>
+			<div class="fecha">
+				<label for="dia">Dia</label>
+				<select id="dia" name="dia">
+				<option value="X" selected="selected">...</option>
+				<option value="01">01</option>
+				<option value="02">02</option>
+				</select>
+			</div>
+			<div class="fecha">
+				<label for="mes">Mes</label>
+				<select id="mes" name="mes">
+				<option value="X" selected="selected">...</option>
+				<option value="01">01</option>
+				<option value="02">02</option>
+				</select>
+			</div>
+			<div class="fecha">
+				<label for="anio">Año</label>
+				<select id="anio" name="anio">
+				<option value="X" selected="selected">...</option>
+				<option value="1970">1970</option>
+				<option value="1971">1971</option>
+				</select>
+			</div>
+		</fieldset>	
+	</fieldset>
+	<fieldset id="grupo_sugerencias">
+		<legend>Sugerencias</legend>
+		<textarea id="argumento" name="argumento" rows="14" cols="40"></textarea>
+	</fieldset>
+	<div id="capa_enviar">
+		<input type="submit" value="Enviar Datos" id="boton_enviar" name="boton_enviar">
+	</div>
+	</form>
+</div>
+	<script>
+
+		let nombre = document.getElementById("nombre");
+		let apellidos = document.getElementById("apellidos");
+		let dni = document.getElementById("dni");
+
+		// EVENTO RATON NOMBRE
+		nombre.addEventListener('mouseover', event => {
+			event.target.placeholder = "Escriba su nombre";
+			event.target.style.border = "2px solid crimson";
+			document.getElementsByTagName("label")[0].innerHTML = "Nombre: (inserte su nombre)";
+		});
+
+		nombre.addEventListener('mouseout', event => {
+			event.target.placeholder = "";
+			event.target.style.border = "1px solid black";
+			document.getElementsByTagName("label")[0].innerHTML = "Nombre:";
+		});
+
+		apellidos.addEventListener('mouseover', event => {
+			event.target.placeholder = "Escriba sus apellidos";
+			event.target.style.border = "2px solid crimson";
+		});
+
+		apellidos.addEventListener('mouseout', event => {
+			event.target.placeholder = "";
+			event.target.style.border = "1px solid black";
+		});
+
+		dni.addEventListener('mouseover', event => {
+			event.target.placeholder = "12345678X";
+			event.target.style.border = "2px solid crimson";
+			event.target.style.boxShadow = "0px 0px 12px black";
+		});
+
+		dni.addEventListener('mouseout', event => {
+			event.target.placeholder = "";
+			event.target.style.border = "1px solid black";
+			event.target.style.boxShadow = "0px 0px 0px black";
+		});
+
+
+		// -----------------------------------------------------------------------
+
+		nombre.addEventListener('blur', event => {
+			let nombreFormulario = formulario1.nombre.value;
+			document.getElementById("cabecera").innerHTML = nombreFormulario;
+		});
+
+		apellidos.addEventListener('blur', event => {
+			let apellidosFormulario = formulario1.apellidos.value;
+			document.getElementById("cabecera").innerHTML += (" " + apellidosFormulario);
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* IMPORTACIÓN DE FUENTES DE GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+/* '*' es el selector universal: selecciona todos los elementos */
+* {
+    margin: 0;
+
+    /* border-box: no tiene en cuenta el width para padding y borders */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #333;
+}
+
+/* CABECERA */
+
+header {
+    padding: 20px;
+    border-bottom: 2px solid #333;
+
+    /* display: los inline e inline-block se aplican a los elementos (por ejemplo etiquetas a), flex se aplica a los contenedores */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+}
+
+header ul li {
+    /* en este caso es mejor inline porque incluso quita los puntitos de la lista */
+    /* se usa inline en lugar de flex pq se está aplicando a la etiqueta y no a un contenedor de otros */
+    display: inline;
+}
+
+header ul li a {
+    margin: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    padding: 10px;
+}
+
+.img_section {
+    width: 30%;
+    margin: 10px;
+}
+
+.img_section:hover {
+    filter: invert()
+}
+
+main .section1 {
+    /* se usa el display:flex aquí porque section es el CONTENEDOR de las imagenes */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* main .section2 {
+    display: flex;
+    margin-top: 40px;
+} */
+
+main .section2 article {
+    padding: 10px;
+    margin-top: 10px;
+    text-align: justify;
+    display: inline-block;
+    width: 48%;
+}
+
+main .section2 article:hover {
+    animation: dance 2s forwards;
+}
+
+@keyframes dance {
+    0%{
+        transform: translateY(0px)
+      }
+    100%{
+        transform: translateY(15px);
+        color: orangered;
+        border: 2px solid orangered;
+        border-radius: 10px;
+        background-color: greenyellow;
+        padding:10px;
+        margin-bottom: 25px;
+      }
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #333;
+}
+
+/* CONTACTO */
+
+form {
+    width: 50%;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+input {
+    width: 100%;
+    padding: 5px 2px;
+    margin: 5px 0;
+    outline: none;
+    /* quita el resaltado del borde del input al tener el focus */
+}
+
+textarea {
+    resize: none;
+    /* así el usuario no puede cambiar su tamaño */
+    width: 100%;
+    height: 150px;
+    padding: 5px 2px;
+    margin: 5px 0;
+    outline: none;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 768px) {
+
+    /* se muestra un solo articulo uno debajo del otro si hay menos de 768px */
+    main .section2 article {
+        width: 100%;
+        display: block;
+    }
+
+    /* la sección de imagenes pasa a mostrarse una debajo de otra ocupando el 100% cuando hay menos de 768px */
+    main .section1 img {
+        width: 100%;
+        display: block;
+    }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- TemplateBeginEditable name="doctitle" -->
+	<title>Pintores destacados</title>
+	<!-- TemplateEndEditable -->
+	<link href="../css/styles.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+	<header>
+		<a href="../index.html" title="Volver a Inicio"><img id="logo" src="../img/logo.png" alt="Logo de la página"></a>
+		<h1>Pintores destacados</h1>
+		<nav>
+			<div class="menuses">
+				<ul class="lista_principal">
+					<li id="menu">Pintores</li>
+							<ul class="lista_pintores">
+								<a href="../caravaggio.html"><li>Caravaggio</li></a>
+								<a href="../sorolla.html"><li>Sorolla</li></a>
+								<a href="../van_gogh.html"><li>Van Gogh</li></a>
+						   </ul>
+					<li>Movimientos</li>
+					<li>Contacto</li>
+				</ul>
+    		</div>
+		</nav>
+	</header>
+	<section>
+		<h2><!-- TemplateBeginEditable name="Nombre Pintor" -->Nombre Pintor<!-- TemplateEndEditable --></h2>
+		<h3><!-- TemplateBeginEditable name="Introducción" -->Introducción<!-- TemplateEndEditable --></h3>
+		<div class="contenido"><!-- TemplateBeginEditable name="Foto Pintor" -->
+		  <div class="image"><img id="img_pintor" src="../img/Caravaggio.jpg" alt="imagen de pintor"></div>
+		<!-- TemplateEndEditable -->
+		  <div class="texto"><!-- TemplateBeginEditable name="Texto" --> Michelangelo Merisi da Caravaggio (Milán, 29 de septiembre de 1571-Porto Ercole, 18 de julio de 1610), conocido como Caravaggio, fue un pintor italiano, activo en Roma, Nápoles, Malta y Sicilia entre 1593 y 1610. Su pintura combina una observación realista de la figura humana, tanto en lo físico como en lo emocional, con un uso dramático de la luz, lo cual ejerció una influencia decisiva en la formación de la pintura del Barroco. <!-- TemplateEndEditable --></div>
+		</div>
+	</section>
+	<footer>
+		<p>
+			Copyleft 2022. Esto es todo amigos. Escríbenos para sugerencias o comentarios: <a id="mail" href="mailto:correo@dominio.es">correo@dominio.es</a>
+		</p>
+	</footer>
+</body>
+</html>

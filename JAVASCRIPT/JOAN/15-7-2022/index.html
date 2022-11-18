@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, ::after, ::before{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 30px;
+            text-align: justify;
+        }
+
+        img{
+            width: 300px;
+            border: solid 5px black;
+            padding: 15px;
+            border-radius: 25px;
+            background-color: bisque;
+            margin: 20px;
+        }
+        button{
+            padding: 20px;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="especial">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, delectus illum deserunt fugiat labore quos incidunt quidem eaque tenetur eos explicabo harum aperiam praesentium id expedita animi! Deserunt, quidem expedita.</div>
+
+    <h1>DOM</h1>
+    <p class="intro"></p>
+    <h2></h2>
+    <p>Sin clase</p>
+    <p class="pie"></p>
+    <p id="espacial"></p>
+    <img id="imagePeepo" src="img/peepo_1.png"><br><br>
+    <button id="botonCambiarImagen">Cambiar Imagen</button>
+
+    <script>
+        document.getElementById("espacial").innerHTML = "Welcome to JavaScream";
+
+        const claseIntro = document.getElementsByClassName("intro");
+        claseIntro[0].innerHTML = "Esta es la clase intro.";
+
+        let imageId = document.getElementById("imagePeepo");
+
+        document.getElementById("botonCambiarImagen").onclick = cambiarImagen;
+
+        function cambiarImagen(){
+            let peepo = document.getElementById("imagePeepo");
+            let boton = document.getElementById("botonCambiarImagen");
+
+            if (peepo.src.match("img/peepo_1.png"))
+            {
+                peepo.src = "img/peepo_3.png";
+                boton.style.backgroundColor = "black";
+                boton.style.color = "white";
+                boton.insertAdjacentText = "Cambiado";
+            }
+            else 
+            {
+                peepo.src = "img/peepo_1.png";
+                boton.style.backgroundColor = "white";
+                boton.style.color = "black";
+                boton.insertAdjacentText = "Cambiar Imagen";
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

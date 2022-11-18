@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-family: 'Roboto', sans-serif;
+        }
+
+    </style>
+    <script>
+
+        window.onload = inicio;
+
+        function inicio(){
+            let caja1 = document.getElementById("caja1");
+            let caja2 = document.getElementById("caja2");
+            for (let k = 1; k < 7; k++)
+            {
+                let html = `<h${k}> Encabezado ${k} <h${k}>`;
+                caja1.insertAdjacentHTML("beforeend", html);
+
+            }
+
+            for (let k = 1; k < 7; k++)
+            {
+
+                let parrafo = `<p style="font-size: ${k}em"> Texto de tamaño ${k}em</p>`;
+                caja2.insertAdjacentHTML("beforeend", parrafo);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="caja1"></div>
+    <div id="caja2"></div>
+</body>
+
+</html>

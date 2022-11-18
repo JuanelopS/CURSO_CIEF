@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body{background-color:#F9DB76 ;
+	font-family:Verdana, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "sans-serif";
+}
+
+#etiquetas {
+    background-color: #0d0;
+    width: 25%;
+    height: 300px;
+	position: absolute;
+	left: 5%;
+    top: 7em;
+	text-align: right;
+}
+#campos {
+    background-color: #0dd;
+    width: 30%;
+    height: 300px;
+    position: absolute;
+	left: 31%;
+    top: 7em;
+}
+
+legend {font-size:1.5em;
+		font-weight:bolder;}
+
+p{margin:.8em .5em;
+  line-height:1.5em;}
+
+
+
+
+
+
+
+
+
+
+

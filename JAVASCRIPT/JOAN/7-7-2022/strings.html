@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Strings</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 50px;
+        font-size: 1.6rem;
+        line-height: 4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let cadena = "Hola buenas tardes!";
+
+      document.write(cadena + "<br>");
+
+      document.write("Longitud de cadena: " + cadena.length + "<br>");
+
+      document.write("Función substring(0,4): " + cadena.substring(0, 4) + "<br>");
+
+      document.write("Función charAt(3): " + cadena.charAt(3) + "<br>");
+
+      document.write("Función concat: " + cadena.concat(" ~~ Adiós pesado!" + "<br>"));
+
+      document.write("Función indexOf: " + cadena.indexOf('a', 5) + "<br>");  //devuelve -1 si no se encuentra
+
+      document.write("Función replace: " + cadena.replace(/a/g, "e") + "<br>"); //con expresiones regulares si se pueden cambiar todas las coincidencias
+
+      let array = cadena.split(" "); //divide la cadena en un array, usando " " de separador entre los índices
+      document.write("Función split: " + array + "<br>");
+
+      document.write("Función upperCase: " + cadena.toUpperCase() + "<br>");
+
+      document.write("Función lowerCase: " + cadena.toLowerCase() + "<br>");
+
+    </script>
+  </body>
+</html>

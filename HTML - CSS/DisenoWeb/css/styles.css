@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 20px;
+    /*background-color: rgba(23, 254, 2, 0.256);*/
+    /*direction: rtl;*/
+    background-image: url('https://www.creativosonline.org/wp-content/uploads/2017/08/gifs-antiguos.gif');
+    background-size: contain;
+    color: white;
+}
+
+h1{
+    color: orange;
+    background-color: green;
+    width: fit-content;
+    border-radius: 10px;
+    padding:20px;
+    margin: 5px;
+    border: 1px solid orange;
+    text-shadow:2px 2px black;
+    text-transform: capitalize; /*lowercase, uppercase*/
+}
+
+hr{
+    border-color: orange;
+}
+
+h2{
+    color: orange;
+    background-color: green;
+    width: fit-content;
+    border-radius: 10px;
+    padding:20px;
+    margin: 5px;
+    border: 1px solid orange;
+    text-shadow:2px 2px black;
+}
+
+a{
+    color: orangered;
+    text-decoration: none;
+}
+
+p{
+    text-indent: 15px;
+    padding-bottom: 5px;
+    margin: 0.5em;
+}
+
+ul{
+    padding-left: 70px; /* si usamos li es mejor usar el margin-left */
+    list-style-type: square; /* circle, disc */
+    /*letter-spacing: 10px;*/
+    /*word-spacing: 20px;*/
+}
+
+ol{
+    padding-left: 70px; /* si usamos li es mejor usar el margin-left */
+    list-style-type:lower-greek;
+}
+
+li{
+    padding-left: 10px; /* para separar el contenido del item de su viñeta */
+    
+}
+
+img{
+    border: 1px solid black;
+    border-radius: 10px;
+}

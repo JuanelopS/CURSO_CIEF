@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link type="text/css" href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <form action="URL">
+        <fieldset>
+            <legend>DATOS PERSONALES</legend>
+
+            <label for="nombre">*Nombre:</label>
+            <input type="text" id="nombre" name="nombre" size="15" maxlength="20" required autofocus>
+            <br><br>
+            <label for="correo">*Correo:</label>
+            <input type="email" id="correo" name="correo" size="15" maxlength="20" required>
+            <br>
+        
+            <p>Turno preferido:</p>
+            <input type="radio" id="matin" name="producto" value="1">
+            <label for="matin">Mañana</label>
+            <br>
+	        <input type="radio" id="tarda" name="producto" value="2">
+            <label for="tarda">Tarde</label>
+	        
+	        <br><br>
+        
+            <label for="nacimiento">Fecha nacimiento</label>
+            <input type="date" id="nacimiento" min="1900-01-01" max="2022-06-07" name="nacimiento" >
+        </fieldset>
+        <br>
+
+        <label  for="estudios">Nivel de estudios:</label>
+        <select id="estudios" name="estudios" required>
+            <option></option> <!--Para que no aparezca la opción "ESO" por defecto-->
+            <option value="1">ESO</option>
+			<option value="2">Bachiller / CFGM</option>
+			<option value="3">Universitarios / CFGS</option>	
+        </select>
+
+        <br><br>
+
+        <label for="interes">Áreas de interés:</label>
+        <select id="interes" name="interes" size="3"  multiple>
+            <option value="1">Lectura</option>
+            <option value="2">Series/Películas</option>
+            <option value="3">Videojuegos</option>
+            <option value="4">Música</option>
+            <option value="5">Deportes</option>
+            <option value="6">HTML y CSS</option>
+        </select>
+
+        <br><br>
+
+        <p>Nuevo alumno:</p>
+        <input type="radio" id="nuevoSi" name="alumno">
+        <label for="nuevoSi">Sí</label><br>
+        <input type="radio" id="nuevoNo" name="alumno">
+        <label for="nuevoNo">No</label>
+        
+        <br><br>
+
+        <p>¿Cómo nos ha conocido?</p>
+        <input type="checkbox" id="amigos" name="conocido" value="1">
+	    <label for="web">Amigos</label><br>	
+	    <input type="checkbox" id="prensa" name="conocido" value="2">
+	    <label for="tienda">Prensa</label><br>
+        <input type="checkbox" id="web" name="conocido" value="3">
+	    <label for="web">Web</label>	
+	    
+        <br><br>
+
+        <input type="submit" value="Enviar" class="enviar">
+	    <input type="reset" value="Borrar" class="borrar">
+        <br><br>
+        <!--ejemplo de input de imagen-->
+        <input type="image" src="img/form_image.svg" alt="submit" width="150px" height="150px" id="image">
+    
+        <p><small><i>* Campos obligatorios</i></small></p>
+
+        <!--Sugerir contenido de input-->
+        <label>Ejemplo de formulario con sugerencias:
+        <input list="lista" name="list"></label>
+            <datalist id="lista">
+                <option value="Juan">
+                <option value="Jorge">
+                <option value="Javier">
+                <option value="Julián">¿apellido?</option>
+            </datalist>
+        <br><br>
+        a
+        <!--ejemplo de step-->
+        <label for="talla">Talla de pantalon:</label>
+        <input type="number" id="talla" name="talla" min="34" max="50" step="2">
+        <br><br>
+    </form>
+</body>
+</html>
